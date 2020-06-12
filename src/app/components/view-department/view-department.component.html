@@ -1,0 +1,586 @@
+<!-- HEADER -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <title>Cisco |</title>
+  <link rel="shortcut icon" href="https://bnetservice.com.mx/bnetservice.ico" />
+  <link
+    rel="icon"
+    sizes="16x16 32x32 64x64"
+    href="https://bnetservice.com.mx/bnetservice.ico"
+  />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta
+    name="msapplication-config"
+    content="https://bnetservice.com.mx/cisco/templates/lagom/assets/img/favicons/browserconfig.xml"
+  />
+  <link
+    href="https://bnetservice.com.mx/cisco/templates/lagom/core/styles/default/assets/css/theme.css?v=1.4.3"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://bnetservice.com.mx/cisco/assets/css/fontawesome-all.min.css"
+  />
+</head>
+
+
+
+<body
+  class="lagom page-clientareahome page-user-logged"
+  data-phone-cc-input="1"
+>
+  <div class="app-nav hidden-print">
+    
+    <section id="header">
+      <div class="container">
+        <button type="button" class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/home" class="logo"
+          ><img
+            src="https://bnetservice.com.mx/cisco.png"
+            title="Cisco"
+            alt="Cisco"
+        /></a>
+        <ul class="top-nav">
+          <!-- NOTIFICACIONES -->
+          <li class="notify">
+            <a href="#" data-toggle="dropdown">
+              <i class="lm lm-bell"></i>
+              <span class="item-text"></span>
+            </a>
+            <ul class="client-alerts dropdown-menu">
+              <li class="none">
+                <div class="none-icon">
+                  <svg
+                    class="svg-icon"
+                    version="1.1"
+                    xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="https://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="64px"
+                    height="64px"
+                    viewBox="0 0 64 64"
+                    style="enable-background: new 0 0 64 64;"
+                    xml:space="preserve"
+                  >
+                    <path
+                      class="prime stroke"
+                      d="M26.4,37.8C25.5,39,25,40.4,25,42c0,3.9,3.1,7,7,7s7-3.1,7-7c0-1.6-0.5-3-1.4-4.2c-1.8-0.2-3.7-0.3-5.6-0.3
+C30.1,37.5,28.2,37.6,26.4,37.8z"
+                    />
+                    <path
+                      class="outline stroke"
+                      d="M38.9,6.7C38.3,3.5,35.4,1,32,1s-6.3,2.5-6.9,5.7"
+                    />
+                    <path
+                      class="outline stroke"
+                      d="M57,45.1c-3.2-3.8-5-7.9-5-12.3V26c0-11-9-20-20-20s-20,9-20,20v6.8c0,4.4-1.8,8.5-5,12.3"
+                    />
+                    <path
+                      class="outline stroke"
+                      d="M32,63c-7.5,0-14.2-1.5-19.1-3.8C8,56.8,5,53.6,5,50c0-1.7,0.7-3.4,2-4.9c1.4-1.6,3.4-3.1,5.9-4.3
+C17.8,38.5,24.5,37,32,37s14.2,1.5,19.1,3.8C56,43.2,59,46.4,59,50s-3,6.8-7.9,9.2C46.2,61.5,39.5,63,32,63z"
+                    />
+                  </svg>
+                </div>
+                <span class="text-light">
+                  No older notifications.
+                </span>
+              </li>
+            </ul>
+          </li>
+          <!-- FIN NOTIFICACIONES-->
+          <li
+            menuItemName="Account"
+            class="dropdown account account"
+            id="Secondary_Navbar-Account"
+            *ngIf="dataUser"
+          >
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fas fa-ticket lm lm-user"></i
+              ><span class="item-text">{{dataUser.first_name}}</span>
+
+              <b class="ls ls-caret"></b>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li class="dropdown-header">
+                <div class="dropdown-header-title">
+                  {{dataUser.first_name}}
+                  {{dataUser.last_name}}
+                </div>
+                <div class="dropdown-header-desc">
+                  Member since April
+                </div>
+              </li>
+              <li class="nav-divider">
+                -----
+              </li>
+              <li
+                menuItemName="Edit Account Details"
+                class=" "
+                id="Secondary_Navbar-Account-Edit_Account_Details"
+              >
+                <a href="/configuration">
+                  Configuration
+                </a>
+              </li>
+              <li
+                menuItemName="Divider"
+                class="nav-divider"
+                id="Secondary_Navbar-Account-Divider"
+              >
+                <a href="">
+                  -----
+                </a>
+              </li>
+              <li
+                menuItemName="Logout"
+                class=" "
+                id="Secondary_Navbar-Account-Logout"
+              >
+                <a href="/login">
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="main-menu">
+      <nav id="nav" class="navbar navbar-default navbar-main" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            Menu
+          </div>
+          <div class="navbar-collapse" id="primary-nav">
+            <ul class="nav navbar-nav">
+              <li
+                menuItemName="Home"
+                class="home-item active"
+                id="Primary_Navbar-Home"
+              >
+                <a href="/home">
+                  <i class="fas fa-ticket lm lm-home"></i><span>Home</span>
+                </a>
+              </li>
+              <li
+                menuItemName="Support"
+                class="dropdown"
+                id="Primary_Navbar-Support"
+              >
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="fas fa-ticket lm lm-envelope"></i>
+                  <span>Support</span>
+                  <b class="ls ls-caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li
+                    menuItemName="Tickets"
+                    class=" "
+                    id="Primary_Navbar-Support-Tickets"
+                  >
+                    <a href="/view-request">
+                      <i class="fas fa-ticket ls ls-envelope"></i>Tickets</a
+                    >
+                  </li>
+                  <li
+                    menuItemName="open-ticket"
+                    class="open-ticket-item"
+                    id="Primary_Navbar-Support-open-ticket"
+                  >
+                    <a href="/create-request">
+                      <i class="fas fa-ticket ls ls-new-window"></i> Create
+                      request</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="navbar-nav navbar-right">
+              <a href="/create-request" class="btn btn-primary"
+                >Create Ticket</a
+              >
+            </div>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+    </section>
+  </div>
+
+
+  <div class="app-main">
+    <div class="main-body">
+      <div class="container">
+        <div class="main-grid row" style="margin-left: -12px;margin-right: 220px;">
+          <!-- Pages -->
+
+          <div class="main-header col-md-9 pull-md-right">
+            <div class="header-lined">
+              <h1>Department Information</h1>
+              <div class="d-flex space-between align-center"></div>
+            </div>
+          </div>
+
+          <div>
+              <br><br><br>
+          </div> 
+
+          <!--Main Content-->
+            <!--Table Top-->
+            <div class="main-content col-md-8 pull-md-right" >  
+              <div class="table-container clearfix">
+                <div class="table-top">
+                  <div class="d-flex">
+                    <label>Department Names</label>
+                    
+                  </div>
+                  <div>
+                    <form
+                      [formGroup]="departmentByNameForm"
+                      (ngSubmit)="searchDepartment()"
+                    >
+                    <input type="text-right" id="name" formControlName="name" placeholder=" Search ">
+                    &nbsp;  
+                    <button class="far fa-search" type="submit" style="border:none;" ></button>
+                    </form>
+                  </div>
+                  
+                </div>
+
+              </div>
+              <!--End of Table Top-->
+
+              <!--Table Info-->
+              <table id="tableTicketsList" class="table table-list">
+
+                <thead>
+                  <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Details</th>
+                  </tr>
+                </thead>
+                
+                <tbody *ngIf="department">
+
+                  <!--Update-->
+                  <div
+                  class="modal fade"
+                  id="squarespaceModal1"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="modalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                        >
+                          <span aria-hidden="true">×</span
+                          ><span class="sr-only">Cerrar</span>
+                        </button>
+                        <h3 class="modal-title" id="lineModalLabel">
+                          Update Department
+                        </h3>
+                      </div>
+                      <div _ngcontent-mvt-c49="" class="modal-body">
+
+                        <div _ngcontent-mvt-c49="" class="form-group">
+                          <label
+                            _ngcontent-mvt-c49=""
+                            for="exampleInputEmail1"
+                            >Department Name</label>
+                            <input type="text" value="IT" class="form-control"> 
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <div
+                          class="btn-group btn-group-justified"
+                          role="group"
+                          aria-label="group button"
+                        >
+                          <!--UPDATE BTN-->
+                          <div class="btn-group" role="group">
+                            <button class="btn btn-primary" >Update</button>
+                            
+                          </div>
+                          <!--EXIT BTN-->
+                          <div class="btn-group" role="group">
+                            <button
+                              class="btn btn-default btn-hover-green"
+                              data-dismiss="modal"
+                            >
+                              Exit
+                            </button>
+                            <!-- fin form -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <!--End of Update-->
+
+                  <!--Delete-->
+
+                  <div class="modal fade" id="squarespaceModal22" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Cerrar</span></button>
+                        <h3 class="modal-title" id="lineModalLabel">Delete Department</h3>
+                      </div>
+                      <div class="modal-body">
+                         <form name="editaserver" action="pages/chamados/encerrando_chamado.php" method="post"></form>
+                        <input name="chamado" type="hidden" value="2">
+                        <input name="diretorio" type="hidden" value="../../home.php">
+                                <div class="form-group">
+                                 <p>Are you sure you want to delete this department?</p>
+                                </div>
+                      </div>
+                      <div class="modal-footer">
+                        <div class="btn-group btn-group-justified" role="group" aria-label="group button">
+                          <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" role="button">Cancel</button>
+                          </div>
+                          <div class="btn-group" role="group">
+                            <button class="btn btn-primary" >Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+
+                  <!--Delete-->
+                
+                  <!-- Aqui inicia request -->
+                  <tr *ngFor="let department of department;">
+                    <td>
+                      <div class="text">{{department.department}}</div>
+                    </td>
+                    <!--BTNS-->
+                    <td>
+                      <a
+                        data-toggle="modal"
+                        href="#squarespaceModal1"
+                        class="btn-sm btn-primary"
+                        ><i class="far fa-pencil" style="margin-right: 1px;"></i>
+                      </a>
+                      &nbsp;
+                      <!--href="#squarespaceModal22" -->
+                      <a data-toggle="modal" 
+                          href="#squarespaceModal22"
+                          class="btn-sm btn-danger" > <!--(click)=delete(department.id)-->
+                        <i class="fa fa-trash" style="margin-right: 1px;"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Aqui termina request -->
+                </tbody>
+
+              </table>
+              <!--End of Table Info-->
+            </div>
+          <!--End of Main Content-->
+          
+
+          <!--Shortcuts-->
+          
+          <div
+            class="main-sidebar sidebar-secondary col-md-3 pull-md-left sidebar"
+          >
+            <div
+              menuItemName="Admin Shortcuts"
+              class="panel panel-sidebar panel-sidebar"
+            >
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fas fa-bookmark"></i>&nbsp;Shortcuts<i
+                    class="fa fa-chevron-up panel-minimise pull-right"
+                  ></i>
+                </h3>
+              </div>
+       
+              <div
+                menuItemName="User"
+                class="dropdown"
+                id="Primary_Navbar-Support"
+              >
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="far fa-user"></i>
+                  &nbsp;
+                  <span>User</span>
+                  &nbsp;
+                  <!--<b class="ls ls-caret"></b>-->
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <div class="list-group">
+                    <a
+                      menuItemName="Create User"
+                      href="/create-user"
+                      class="list-group-item"
+                      id="Secondary_Sidebar-Create-User"
+                    >
+                      &nbsp;&nbsp;  Create User</a
+                    >
+                  </div>
+                  
+    
+                  <div class="list-group">
+                    <a
+                      menuItemName="View User"
+                      href="/view-user"
+                      class="list-group-item"
+                      id="Secondary_Sidebar-View-User"
+                    >
+                      &nbsp;&nbsp; View User</a
+                    >
+                  </div>
+                  
+                </ul>
+              </div>
+
+              <br>
+
+              <div
+                menuItemName="Department"
+                class="dropdown"
+                id="Primary_Navbar-Support"
+              >
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="far fa-building"></i>
+                  &nbsp;
+                  <span>Department</span>
+                  &nbsp;
+                  <!--<b class="ls ls-caret"></b>-->
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <div class="list-group">
+                    <a
+                      menuItemName="Create Department"
+                      href="/create-department"
+                      class="list-group-item"
+                      id="Secondary_Sidebar-Create-Department"
+                    >
+                      &nbsp;&nbsp; Create Department</a
+                    >
+                  </div>
+    
+                  <div class="list-group">
+                    <a
+                      menuItemName="View Department"
+                      href="/view-department"
+                      class="list-group-item"
+                      id="Secondary_Sidebar-View-Department"
+                    >
+                      &nbsp;&nbsp; View Departments</a
+                    >
+                  </div>
+                  
+                </ul>
+              </div>
+              <br>
+              <div
+                menuItemName="Problem Type"
+                class="dropdown"
+                id="Primary_Navbar-Support"
+              >
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class= "far fa-exclamation-circle"></i>
+                  &nbsp;
+                  <span>Problem Type</span>
+                  &nbsp;
+                  <!--<b class="ls ls-caret"></b>-->
+                </a>
+                <ul class="dropdown-menu">
+                  
+                  <div class="list-group">
+                    <a
+                      menuItemName="Create Problem Type"
+                      href="/create-problem-type"
+                      class="list-group-item"
+                      id="Secondary_Sidebar-Create-Problem-Type"
+                    >
+                      &nbsp;&nbsp; Create Problem Type</a
+                    >
+                  </div>
+    
+                  <div class="list-group">
+                    <a
+                      menuItemName="View Problem Type"
+                      href="/view-problem-type"
+                      class="list-group-item"
+                      id="Secondary_Sidebar-View-Problem-Type"
+                    >
+                      &nbsp;&nbsp; View Problem Type</a
+                    >
+                  </div>
+                </ul>
+              </div>
+
+            </div>
+
+            <!--Version-->
+            <div
+              menuItemName="Version"
+              class="panel panel-sidebar panel-sidebar"
+            >
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fas fa-bookmark"></i>&nbsp;Cisco<i
+                    class="fa fa-chevron-up panel-minimise pull-right"
+                  ></i>
+                </h3>
+              </div>
+              <div class="list-group">
+                <strong><i class="fa fa-code"></i></strong>&nbsp;Version
+                1.5
+              </div>  
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+          <!-- Pages -->
+        </div>
+
+      </div>
+
+      <!--Footer-->
+
+      <br><br>
+      <div class="main-footer hidden-print">
+        <div class="container">
+          <div class="footer-content">
+            <p>Tech Team &copy; 2020 | All rights reserved</p>
+          </div>
+          <a href="/view-department" class="back-to-top btn btn-sm btn-icon"
+            ><i class="lm lm-go-top"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+</body>
+

@@ -1,0 +1,569 @@
+<!-- HEADER -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Cisco |</title>
+    <link rel="shortcut icon" href="https://bnetservice.com.mx/bnetservice.ico" />
+    <link
+      rel="icon"
+      sizes="16x16 32x32 64x64"
+      href="https://bnetservice.com.mx/bnetservice.ico"
+    />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta
+      name="msapplication-config"
+      content="https://bnetservice.com.mx/cisco/templates/lagom/assets/img/favicons/browserconfig.xml"
+    />
+    <link
+      href="https://bnetservice.com.mx/cisco/templates/lagom/core/styles/default/assets/css/theme.css?v=1.4.3"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://bnetservice.com.mx/cisco/assets/css/fontawesome-all.min.css"
+    />
+  </head>
+  
+  
+  
+  <body
+    class="lagom page-clientareahome page-user-logged"
+    data-phone-cc-input="1"
+  >
+    <div class="app-nav hidden-print">
+      
+      <section id="header">
+        <div class="container">
+          <button type="button" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/home-customer" class="logo"
+            ><img
+              src="https://bnetservice.com.mx/cisco.png"
+              title="Cisco"
+              alt="Cisco"
+          /></a>
+          <ul class="top-nav">
+            <!-- NOTIFICACIONES -->
+            <li class="notify">
+              <a href="#" data-toggle="dropdown">
+                <i class="lm lm-bell"></i>
+                <span class="item-text"></span>
+              </a>
+              <ul class="client-alerts dropdown-menu">
+                <li class="none">
+                  <div class="none-icon">
+                    <svg
+                      class="svg-icon"
+                      version="1.1"
+                      xmlns="https://www.w3.org/2000/svg"
+                      xmlns:xlink="https://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      width="64px"
+                      height="64px"
+                      viewBox="0 0 64 64"
+                      style="enable-background: new 0 0 64 64;"
+                      xml:space="preserve"
+                    >
+                      <path
+                        class="prime stroke"
+                        d="M26.4,37.8C25.5,39,25,40.4,25,42c0,3.9,3.1,7,7,7s7-3.1,7-7c0-1.6-0.5-3-1.4-4.2c-1.8-0.2-3.7-0.3-5.6-0.3
+  C30.1,37.5,28.2,37.6,26.4,37.8z"
+                      />
+                      <path
+                        class="outline stroke"
+                        d="M38.9,6.7C38.3,3.5,35.4,1,32,1s-6.3,2.5-6.9,5.7"
+                      />
+                      <path
+                        class="outline stroke"
+                        d="M57,45.1c-3.2-3.8-5-7.9-5-12.3V26c0-11-9-20-20-20s-20,9-20,20v6.8c0,4.4-1.8,8.5-5,12.3"
+                      />
+                      <path
+                        class="outline stroke"
+                        d="M32,63c-7.5,0-14.2-1.5-19.1-3.8C8,56.8,5,53.6,5,50c0-1.7,0.7-3.4,2-4.9c1.4-1.6,3.4-3.1,5.9-4.3
+  C17.8,38.5,24.5,37,32,37s14.2,1.5,19.1,3.8C56,43.2,59,46.4,59,50s-3,6.8-7.9,9.2C46.2,61.5,39.5,63,32,63z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-light">
+                    No older notifications.
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <!-- FIN NOTIFICACIONES-->
+            <li
+              menuItemName="Account"
+              class="dropdown account account"
+              id="Secondary_Navbar-Account"
+              *ngIf="dataUser"
+            >
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fas fa-ticket lm lm-user"></i
+                ><span class="item-text">{{dataUser.first_name}}</span>
+  
+                <b class="ls ls-caret"></b>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li class="dropdown-header">
+                  <div class="dropdown-header-title">
+                    {{dataUser.first_name}}
+                    {{dataUser.last_name}}
+                  </div>
+                  <div class="dropdown-header-desc">
+                    Member since April
+                  </div>
+                </li>
+                <li class="nav-divider">
+                  -----
+                </li>
+                <li
+                  menuItemName="Edit Account Details"
+                  class=" "
+                  id="Secondary_Navbar-Account-Edit_Account_Details"
+                >
+                  <a href="/configuration-customer">
+                    Configuration
+                  </a>
+                </li>
+                <li
+                  menuItemName="Divider"
+                  class="nav-divider"
+                  id="Secondary_Navbar-Account-Divider"
+                >
+                  <a href="">
+                    -----
+                  </a>
+                </li>
+                <li
+                  menuItemName="Logout"
+                  class=" "
+                  id="Secondary_Navbar-Account-Logout"
+                >
+                  <a href="/login">
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <section id="main-menu">
+        <nav id="nav" class="navbar navbar-default navbar-main" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              Menu
+            </div>
+            <div class="navbar-collapse" id="primary-nav">
+              <ul class="nav navbar-nav">
+                <li
+                  menuItemName="Home"
+                  class="home-item active"
+                  id="Primary_Navbar-Home"
+                >
+                  <a href="/home-customer">
+                    <i class="fas fa-ticket lm lm-home"></i><span>Home</span>
+                  </a>
+                </li>
+                <li
+                  menuItemName="MyTickets"
+                  class="dropdown"
+                  id="Primary_Navbar-MyTickets"
+                >
+                  <a href="/view-request-customer">
+                    <i class="fas fa-ticket lm lm-envelope"></i>
+                    <span>My tickets</span>
+                  </a>
+                </li>
+              </ul>
+  
+              <div class="navbar-nav navbar-right">
+                <a href="/create-request-customer" class="btn btn-primary"
+                  >Create Ticket</a
+                >
+              </div>
+            </div>
+            <!-- /.navbar-collapse -->
+          </div>
+        </nav>
+      </section>
+    </div>
+  
+  
+    <div class="app-main">
+      <div class="main-body">
+        <div class="container">
+          <div class="main-grid row">
+            <!-- Pages -->
+  
+            <div class="main-header col-md-9 pull-md-right">
+              <div class="header-lined">
+                <h1>Tickets</h1>
+                <div class="d-flex space-between align-center"></div>
+              </div>
+            </div>
+  
+            <div>
+                <br><br><br>
+            </div> 
+  
+            <!--Main Content-->
+            
+            <div class="main-content col-md-9 pull-md-right">
+              <div class="table-container clearfix">
+                <div class="table-top">
+                  <div class="d-flex">
+                    <label>Show</label>
+  
+                    <div class="dropdown view-filter-btns">
+                      <button
+                        type="button"
+                        class="btn btn-default btn-sm dropdown-toggle"
+                        data-toggle="dropdown"
+                      >
+                        <span>All</span>
+                        <i class="ls ls-caret"></i>
+                      </button>
+  
+                      <ul class="dropdown-menu" role="menu">
+                        <li>
+                          <a (click)=getAll()>All</a>
+                        </li>
+                        <li>
+                          <a (click)=getClosed()>Closed</a>
+                        </li>
+                      </ul>
+  
+                    </div>
+                  </div>
+                  <div>
+                    <form
+                      [formGroup]="RequestByDescriptionCustomerForm"
+                      (ngSubmit)="requestSearch()"
+                    >
+                    <input type="text-right" id="description" formControlName="description" placeholder=" Search "> 
+                    &nbsp;  
+                    <button class="far fa-search" type="submit" style="border:none;" ></button>
+                    </form>
+                  </div>
+                </div>
+                
+                <table id="tableTicketsList" class="table table-list">
+                  <thead>
+                    <tr>
+                      <th class="text-center">
+                        <button type="button" class="btn-table-collapse"></button
+                        >Departament<span class="sorting-arrows"></span>
+                      </th>
+                      <th class="text-center">Issue<span class="sorting-arrows"></span></th>
+                      <th class="text-center">Status<span class="sorting-arrows"></span></th>
+                      <th class="text-center">
+                          Last Update<span
+                          class="sorting-arrows"
+                        ></span>
+                      </th>
+                      <th>Priority</th>
+                      <th>View<span class="sorting-arrows"></span></th>
+                    </tr>
+                  </thead>
+                  <tbody *ngIf="requestsUser">
+                    <!-- Visualizacion -->
+                    <div
+                      class="modal fade"
+                      id="squarespaceModal21"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="modalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                            >
+                              <span aria-hidden="true">×</span
+                              ><span class="sr-only">Cerrar</span>
+                            </button>
+                            <h3 class="modal-title" id="lineModalLabel">
+                              Cerrar tu ticket #1 de soporte
+                            </h3>
+                          </div>
+                          <div class="modal-body">
+                            <!-- content goes here -->
+                            <!-- form -->
+                            <input name="chamado" type="hidden" value="1" />
+                            <input
+                              name="diretorio"
+                              type="hidden"
+                              value="../../home.php"
+                            />
+                            <div class="form-group">
+                              <p>
+                                &iquest;Estas seguro de querer cerrar este ticket?
+                              </p>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <div
+                              class="btn-group btn-group-justified"
+                              role="group"
+                              aria-label="group button"
+                            >
+                              <div class="btn-group" role="group">
+                                <button
+                                  type="button"
+                                  class="btn btn-default"
+                                  data-dismiss="modal"
+                                  role="button"
+                                >
+                                  Cancelar
+                                </button>
+                              </div>
+                              <div class="btn-group" role="group">
+                                <button class="btn btn-default btn-hover-green">
+                                  Cerrar ticket
+                                </button>
+                                <!-- fin form -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div
+                      class="modal fade"
+                      id="squarespaceModal1"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="modalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                            >
+                              <span aria-hidden="true">×</span
+                              ><span class="sr-only">Cerrar</span>
+                            </button>
+                            <h3 class="modal-title" id="lineModalLabel">
+                              Ticket Information
+                            </h3>
+                          </div>
+                          <div _ngcontent-mvt-c49="" class="modal-body">
+                            <div _ngcontent-mvt-c49="" class="form-group">
+                              <label
+                                _ngcontent-mvt-c49=""
+                                for="exampleInputEmail1"
+                                >Problem type</label>
+                              
+                              <select
+                                _ngcontent-mvt-c49=""
+                                size="1"
+                                class="form-control">
+                                <option _ngcontent-mvt-c49="" selected="selectes">{{requestsUser.description}}</option>
+                              </select>
+                            </div>
+                            <div _ngcontent-mvt-c49="" class="form-group">
+                              <label
+                                _ngcontent-mvt-c49=""
+                                for="exampleInputEmail1"
+                                >Description</label
+                              ><input
+                                _ngcontent-mvt-c49=""
+                                type="text"
+                                id="exampleInputEmail1"
+                                value="desc"
+                                disabled=""
+                                class="form-control"
+                              />
+                            </div>
+                            <div _ngcontent-mvt-c49="" class="form-group">
+                              <label
+                                _ngcontent-mvt-c49=""
+                                for="exampleInputEmail1"
+                                >Last customer response</label
+                              ><textarea
+                                _ngcontent-mvt-c49=""
+                                rows="5"
+                                cols="20"
+                                wrap="off"
+                                disabled=""
+                                class="form-control"
+                              >
+                                  Testing...</textarea
+                              >
+                            </div>
+                            <div _ngcontent-mvt-c49="" class="form-group">
+                              <label
+                                _ngcontent-mvt-c49=""
+                                for="exampleInputPassword1"
+                                >Last support response</label
+                              ><textarea
+                                _ngcontent-mvt-c49=""
+                                rows="5"
+                                cols="20"
+                                wrap="off"
+                                placeholder="Support..."
+                                required=""
+                                disabled=""
+                                class="form-control"
+                              >
+                                  Last answer...</textarea
+                              >
+                            </div>
+                            <div _ngcontent-mvt-c49="" class="form-group">
+                              <label
+                                _ngcontent-mvt-c49=""
+                                for="exampleInputPassword1"
+                                >New answer</label
+                              ><textarea
+                                _ngcontent-mvt-c49=""
+                                rows="5"
+                                cols="20"
+                                wrap="off"
+                                placeholder="New answer..."
+                                required=""
+                                class="form-control"
+                              ></textarea>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <div
+                              class="btn-group btn-group-justified"
+                              role="group"
+                              aria-label="group button"
+                            >
+                              <div class="btn-group" role="group">
+                                <button
+                                  class="btn btn-default btn-hover-green"
+                                  data-dismiss="modal"
+                                >
+                                  Salir
+                                </button>
+                                <!-- fin form -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- FIN Visualizacion -->
+                    <!-- Aqui inicia request -->
+                    <tr *ngFor="let request of requestsUser">
+                      <td>
+                        <button type="button" class="btn-table-collapse"></button>
+                        Web
+                      </td>
+                      <td>
+                        <div class="text-primary">
+                          #{{ request.id_problem_type }}
+                          {{ request.description }}
+                        </div>
+                      </td>
+                      <td>
+                        <li *ngIf="request.status === 'IN PROCESS'"
+                          class="status" style="--status-color: #1fc063;">
+                          {{request.status}}
+                        </li>
+  
+                        <li *ngIf="request.status === 'CLOSED' || request.status === 'Closed'"
+                          class="status" style="--status-color: #D83A24;">
+                          {{request.status}}
+                        </li>
+                      </td>
+                      <td class="text-center sorting_1 text-nowrap">
+                        {{ request.creation_date}}
+                      </td>
+  
+                      <td>
+                        {{request.priority}}
+                      </td>
+  
+                      <td class="text-center sorting_1 text-nowrap">
+                        <a
+                          data-toggle="modal"
+                          href="#squarespaceModal1"
+                          class="btn-sm btn-primary"
+                          ><i class="fa fa-eye" style="margin-right: 1px;"></i
+                        ></a>
+                      </td>
+                    </tr>
+                    <!-- Aqui termina request -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+  
+  
+            <!--End of Main Content-->
+            
+  
+            <!--Shortcuts-->
+            
+            <div
+              class="main-sidebar sidebar-secondary col-md-3 pull-md-left sidebar"
+            >
+              
+              <div
+                menuItemName="Version"
+                class="panel panel-sidebar panel-sidebar"
+              >
+                <div class="panel-heading">
+                  <h3 class="panel-title">
+                    <i class="fas fa-bookmark"></i>&nbsp;Cisco<i
+                      class="fa fa-chevron-up panel-minimise pull-right"
+                    ></i>
+                  </h3>
+                </div>
+                <div class="list-group">
+                  <strong><i class="fa fa-code"></i></strong>&nbsp;Version
+                  1.5
+                </div>  
+              </div>
+  
+              <div class="clearfix"></div>
+            </div>
+  
+  
+  
+            <!-- Pages -->
+          </div>
+  
+        </div>
+        <!--Footer-->
+  
+        <br><br>
+        <div class="main-footer hidden-print">
+          <div class="container">
+            <div class="footer-content">
+              <p>Tech Team &copy; 2020 | All rights reserved</p>
+            </div>
+            <a href="/view-request-customer" class="back-to-top btn btn-sm btn-icon"
+              ><i class="lm lm-go-top"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+  </body>
+  

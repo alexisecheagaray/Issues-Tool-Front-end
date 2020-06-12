@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "issues-tool": {
+    "issues": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/issues-tool",
+            "outputPath": "dist/issues",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/scripts.min.js",
+              "src/assets/core.min.js",
+              "src/assets/lagom-app.min.js",
+              "src/assets/whmcs-custom.min.js",
+              "src/assets/jquery.dataTables.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "issues-tool:build"
+            "browserTarget": "issues:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "issues-tool:build:production"
+              "browserTarget": "issues:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "issues-tool:build"
+            "browserTarget": "issues:build"
           }
         },
         "test": {
@@ -88,7 +98,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -110,15 +120,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "issues-tool:serve"
+            "devServerTarget": "issues:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "issues-tool:serve:production"
+              "devServerTarget": "issues:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "issues-tool"
+    }
+  },
+  "defaultProject": "issues",
+  "cli": {
+    "analytics": "13f477bc-9440-4f78-aae7-1371f2d18cb9"
+  }
 }

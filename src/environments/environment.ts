@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  url : 'http://cisco.bnetservice.com.mx:5000/supply/api/v1.0/',
+  loginData : 'assets/data.json'
 };
 
 /*

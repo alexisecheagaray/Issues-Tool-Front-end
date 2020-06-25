@@ -52,6 +52,18 @@ export class RequestService{
           return this._http.get(this.url+'get_department_by_admin_support/' + userEmail, {headers:headers});
     }
 
+    ///RESPONSE A TICKET
+    createRequestUpdate(request): Observable<any> {
+      let params = JSON.stringify(request);
+      let headers = new HttpHeaders().set(
+        'Authorization',
+        'Basic ' + btoa('root:123456')
+      );
+      return this._http.post(this.url + 'new_request_update/', params, {
+        headers: headers,
+      });
+    }
+
     /////////////////////////CUSTOMER
     //View Request User
     getRequestsUser( userEmail ): Observable<any>{
@@ -67,6 +79,11 @@ export class RequestService{
     }
 
     ///////////////////////////////////  REQUESTS //////////////////////////////////
+    getRequestByID( id ): Observable<any>{
+      let headers = new HttpHeaders().set('Authorization','Basic ' + btoa("root:123456"));
+          return this._http.get(this.url+'get_request_by_id/' + id, {headers:headers});
+    }
+
     //////////////ADMIN
     getListClosedAdmin(): Observable<any>{
       let headers = new HttpHeaders().set('Authorization','Basic ' + btoa("root:123456"));

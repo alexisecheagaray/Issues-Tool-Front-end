@@ -12,11 +12,18 @@ import { environment } from 'src/environments/environment';
 })
 export class ViewRequestComponent implements OnInit {
   RequestByDescriptionForm: FormGroup;
-  public requestsClosed:  any;
-  public requestValue:    any;
-  public loginUsers:      any;
-  public requests:        any;
-  public dataUser:        any;
+  CreateRequestUpdateForm:  FormGroup;
+  RequestAnswerForm:        FormGroup;
+  public requestsClosed:    any;
+  public requestValue:      any;
+  public loginUsers:        any;
+  public requests:          any;
+  public requestByID:       any;
+  public requestUnico:      any;
+  public requestProblem:    any;
+  public dataUser:          any;
+  public requestID:         any;
+  public requestStatus:     any;
   constructor(
     private _requestService: RequestService,
     private _router: Router,
@@ -25,16 +32,73 @@ export class ViewRequestComponent implements OnInit {
       this.RequestByDescriptionForm = this.fb.group({
         description:  ''
       });
+      this.CreateRequestUpdateForm = this.fb.group({
+        id_department_support:  '',
+        description:            '',
+        status:                 '',
+        id_request:             '',
+      });
+      this.RequestAnswerForm = this.fb.group({
+        description: '',
+      })
     }
-
+  
   public requestByDescription = {
     "description":  ""
+  }
+
+  public requestUpdate = {
+    "id_department_support":  "1",
+    "description":            "",
+    "status":                 "",
+    "id_request":             "",
   }
 
   ngOnInit(): void {
     this.getRequests();    
     this.getUserInfo();
   }
+
+  saveRequestUpdate(){
+    
+    //this.requestUpdate.id_department_support  = this.CreateRequestUpdateForm.value.id_department_support;
+    this.requestUpdate.id_department_support  = "1";
+    this.requestUpdate.description            = this.RequestAnswerForm.value.description;
+    this.requestUpdate.status                 = this.requestStatus;
+    this.requestUpdate.id_request             = this.requestID;
+
+    console.log("problema resuelto:",this.requestUpdate);
+    console.log("Respuesta:", this.requestUpdate.description  );
+    
+    this._requestService.createRequestUpdate(this.requestUpdate).subscribe(
+      (response) => {
+        alert(response);
+        window.location.reload();
+      },
+      (error) => {}
+    );
+  }
+
+  requestSearchID(id){
+    this._requestService.getRequestByID(id).subscribe(
+      (response) => {
+        this.requestByID = response;
+        //console.log('Request by ID:', this.requestByID);
+        this.requestUnico   = this.requestByID[0].description;
+        this.requestProblem = this.requestByID[0].problem_type;
+        this.requestID      = this.requestByID[0].id;
+        this.requestStatus  = this.requestByID[0].status;
+
+        console.log("ID Department: ",this.requestUpdate.id_department_support );
+        //console.log("Description: ",this.requestUnico);
+        console.log("Problem Type: ",this.requestProblem);
+        console.log("Request ID: ",this.requestID);
+        console.log("Status: ",this.requestStatus);
+      },
+      (error) => {}
+    );
+  }
+
 
   requestSearch() {
     this.requestByDescription.description = this.RequestByDescriptionForm.value.description;

@@ -238,7 +238,7 @@
                     </div>
                     <div class="list-group">
                       
-                      <!-- Mensaje respuesta -->
+                      <!-- Visualizacion -->
                       <div
                         class="modal fade"
                         id="squarespaceModal1"
@@ -256,46 +256,60 @@
                                 data-dismiss="modal"
                               >
                                 <span aria-hidden="true">×</span
-                                ><span class="sr-only">Close</span>
+                                ><span class="sr-only">Back</span>
                               </button>
                               <h3 class="modal-title" id="lineModalLabel">
                                 Ticket Information
                               </h3>
                             </div>
-                            <div class="modal-body">
-                              <!-- content goes here -->
-                              <div class="form-group">
-                                <label for="exampleInputEmail1"
-                                  >Problem type</label
-                                >
-                                <select size="1" class="form-control" disabled>
-                                  <option selected="selectes">Type</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="exampleInputEmail1"
-                                  >Description</label
-                                >
-                                <input
+                            <div _ngcontent-mvt-c49="" class="modal-body">
+                              <div _ngcontent-mvt-c49="" class="form-group">
+                                <label
+                                  _ngcontent-mvt-c49=""
+                                  for="exampleProblem"
+                                  >Problem type</label>
+                                
+                                  <input
+                                  _ngcontent-mvt-c49=""
                                   type="text"
+                                  id="problem_type"
+                                  [(ngModel)]= "requestProblem"
+                                  disabled=""
                                   class="form-control"
-                                  id="exampleInputEmail1"
-                                  value="desc"
-                                  disabled
+                                  />
+
+                              </div>
+                              
+                              <div _ngcontent-mvt-c49="" class="form-group">
+                                <label
+                                  _ngcontent-mvt-c49=""
+                                  for="exampleDescription"
+                                  >Description</label
+                                ><input
+                                  _ngcontent-mvt-c49=""
+                                  type="text"
+                                  id="description2"
+                                  [(ngModel)]= "requestUnico"
+                                  disabled=""
+                                  class="form-control"
                                 />
                               </div>
-                              <div class="form-group">
-                                <label for="exampleInputEmail1">Response</label>
-                                <textarea
-                                  class="form-control"
+
+                              
+                              <div _ngcontent-mvt-c49="" class="form-group">
+                                <label
+                                  _ngcontent-mvt-c49=""
+                                  for="exampleInputEmail1"
+                                  >Response</label
+                                ><textarea
+                                  _ngcontent-mvt-c49=""
                                   rows="5"
                                   cols="20"
                                   wrap="off"
-                                  disabled
-                                >Testing...</textarea>
+                                  class="form-control"
+                                  disabled=""
+                                > </textarea>
                               </div>
-                              
-                              
                             </div>
                             <div class="modal-footer">
                               <div
@@ -303,21 +317,22 @@
                                 role="group"
                                 aria-label="group button"
                               >
+                              
                                 <div class="btn-group" role="group">
                                   <button
                                     class="btn btn-default btn-hover-green"
                                     data-dismiss="modal"
                                   >
-                                    Ok
+                                    Back
                                   </button>
-                                  <!-- -->
+                                  <!-- fin form -->
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <!-- FIN Mensaje respuesta -->
+                      <!-- FIN Visualizacion -->
   
                       <!-- Requests -->
                       <div *ngIf="requests">
@@ -343,6 +358,7 @@
   
                             <a
                               data-toggle="modal"
+                              (click)= "requestSearchID(request.id)"
                               href="#squarespaceModal1"
                               class="btn-sm btn-primary"
                               >

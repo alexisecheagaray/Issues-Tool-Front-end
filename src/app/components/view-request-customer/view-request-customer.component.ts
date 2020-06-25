@@ -12,10 +12,13 @@ import { environment } from 'src/environments/environment';
 })
 export class ViewRequestCustomerComponent implements OnInit {
   RequestByDescriptionCustomerForm: FormGroup;
-  public requestsUser:  any;
-  public loginUsers:    any;
-  public dataUser:      any;
-  public count:         any;
+  public requestProblem:  any;
+  public requestUnico:    any;
+  public requestsUser:    any;
+  public requestByID:     any;
+  public loginUsers:      any;
+  public dataUser:        any;
+  public count:           any;
 
   constructor(
     private _requestService: RequestService,
@@ -52,6 +55,21 @@ export class ViewRequestCustomerComponent implements OnInit {
     this._requestService.getListBySearchCustomer( this.requestByDescription ).subscribe(
       (response) => {
         this.requestsUser = response;
+      },
+      (error) => {}
+    );
+  }
+
+  requestSearchID(id){
+    this._requestService.getRequestByID(id).subscribe(
+      (response) => {
+        this.requestByID = response;
+        console.log('Request by ID:', this.requestByID);
+        this.requestUnico = this.requestByID[0].description;
+        this.requestProblem = this.requestByID[0].problem_type;
+
+        console.log(this.requestUnico);
+        
       },
       (error) => {}
     );

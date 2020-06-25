@@ -48,6 +48,16 @@
             title="Cisco"
             alt="Cisco"
         /></a>
+
+        &nbsp;&nbsp;
+          <div>
+            &nbsp;&nbsp;
+          </div>
+          <div>
+            &nbsp;&nbsp;
+            <h3 style="color: #139dd0;"> ADMIN</h3>
+          </div>
+
         <ul class="top-nav">
           <!-- NOTIFICACIONES -->
           <li class="notify">
@@ -259,183 +269,103 @@ C17.8,38.5,24.5,37,32,37s14.2,1.5,19.1,3.8C56,43.2,59,46.4,59,50s-3,6.8-7.9,9.2C
                     </h3>
                   </div>
                   <div class="list-group">
-                    <div
-                      class="modal fade"
-                      id="squarespaceModal21"
-                      tabindex="-1"
-                      role="dialog"
-                      aria-labelledby="modalLabel"
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button
-                              type="button"
-                              class="close"
-                              data-dismiss="modal"
-                            >
-                              <span aria-hidden="true">×</span
-                              ><span class="sr-only">Close</span>
-                            </button>
-                            <h3 class="modal-title" id="lineModalLabel">
-                              Close your support ticket # 1
-                            </h3>
-                          </div>
-                          <div class="modal-body">
-                            <!-- Mensaje cerrar ticket -->
-                            <input name="chamado" type="hidden" value="1" />
+                    
+                  <!-- Visualizacion -->
+                  <div
+                  class="modal fade"
+                  id="squarespaceModal1"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="modalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                        >
+                          <span aria-hidden="true">×</span
+                          ><span class="sr-only">Back</span>
+                        </button>
+                        <h3 class="modal-title" id="lineModalLabel">
+                          Ticket Information
+                        </h3>
+                      </div>
+                      <div _ngcontent-mvt-c49="" class="modal-body">
+                        <div _ngcontent-mvt-c49="" class="form-group">
+                          <label
+                            _ngcontent-mvt-c49=""
+                            for="exampleProblem"
+                            >Problem type</label>
+                          
                             <input
-                              name="diretorio"
-                              type="hidden"
-                              value="/home"
+                            _ngcontent-mvt-c49=""
+                            type="text"
+                            id="problem_type"
+                            [(ngModel)]= "requestProblem"
+                            disabled=""
+                            class="form-control"
                             />
-                            <div class="form-group">
-                              <p>
-                                &iquest;Are you sure you want to close this
-                                ticket?
-                              </p>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <div
-                              class="btn-group btn-group-justified"
-                              role="group"
-                              aria-label="group button"
-                            >
-                              <div class="btn-group" role="group">
-                                <button
-                                  type="button"
-                                  class="btn btn-default"
-                                  data-dismiss="modal"
-                                  role="button"
-                                >
-                                  Cancel
-                                </button>
-                              </div>
-                              <div class="btn-group" role="group">
-                                <button class="btn btn-default btn-hover-green">
-                                  Close ticket
-                                </button>
-                                <!-- FIN Mensaje cerrar ticket -->
-                              </div>
-                            </div>
-                          </div>
+
+                        </div>
+                        
+                        <div _ngcontent-mvt-c49="" class="form-group">
+                          <label
+                            _ngcontent-mvt-c49=""
+                            for="exampleDescription"
+                            >Description</label
+                          ><input
+                            _ngcontent-mvt-c49=""
+                            type="text"
+                            id="description2"
+                            [(ngModel)]= "requestUnico"
+                            disabled=""
+                            class="form-control"
+                          />
+                        </div>
+
+                        
+                        <div _ngcontent-mvt-c49="" class="form-group">
+                          <label
+                            _ngcontent-mvt-c49=""
+                            for="exampleInputEmail1"
+                            >Response</label
+                          ><textarea
+                            _ngcontent-mvt-c49=""
+                            rows="5"
+                            cols="20"
+                            wrap="off"
+                            class="form-control"
+                          ></textarea>
                         </div>
                       </div>
-                    </div>
-
-                    <!-- Mensaje respuesta -->
-                    <div
-                      class="modal fade"
-                      id="squarespaceModal1"
-                      tabindex="-1"
-                      role="dialog"
-                      aria-labelledby="modalLabel"
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
+                      <div class="modal-footer">
+                        <div
+                          class="btn-group btn-group-justified"
+                          role="group"
+                          aria-label="group button"
+                        >
+                        <div class="btn-group" role="group">
+                          <button class="btn btn-primary" >Reply</button>
+                        </div>
+                          <div class="btn-group" role="group">
                             <button
-                              type="button"
-                              class="close"
+                              class="btn btn-default btn-hover-green"
                               data-dismiss="modal"
                             >
-                              <span aria-hidden="true">×</span
-                              ><span class="sr-only">Close</span>
+                              Back
                             </button>
-                            <h3 class="modal-title" id="lineModalLabel">
-                              Ticket Information
-                            </h3>
-                          </div>
-                          <div class="modal-body">
-                            <!-- content goes here -->
-                            <div class="form-group">
-                              <label for="exampleInputEmail1"
-                                >Problem type</label
-                              >
-                              <select size="1" class="form-control" disabled>
-                                <option selected="selectes">Type</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1"
-                                >Description</label
-                              >
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="exampleInputEmail1"
-                                value="desc"
-                                disabled
-                              />
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputEmail1"
-                                >Last customer response</label
-                              >
-                              <textarea
-                                class="form-control"
-                                rows="5"
-                                cols="20"
-                                wrap="off"
-                                disabled
-                              >
-                                Testing...</textarea
-                              >
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1"
-                                >Last support response</label
-                              >
-                              <textarea
-                                class="form-control"
-                                rows="5"
-                                cols="20"
-                                wrap="off"
-                                placeholder="Support..."
-                                required
-                                disabled
-                              >
-                                Last answer...</textarea
-                              >
-                            </div>
-                            <div class="form-group">
-                              <label for="exampleInputPassword1"
-                                >New answer</label
-                              >
-                              <textarea
-                                class="form-control"
-                                rows="5"
-                                cols="20"
-                                wrap="off"
-                                placeholder="New answer..."
-                                required
-                              ></textarea>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <div
-                              class="btn-group btn-group-justified"
-                              role="group"
-                              aria-label="group button"
-                            >
-                              <div class="btn-group" role="group">
-                                <button
-                                  class="btn btn-default btn-hover-green"
-                                  data-dismiss="modal"
-                                >
-                                  Send
-                                </button>
-                                <!-- -->
-                              </div>
-                            </div>
+                            <!-- fin form -->
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- FIN Mensaje respuesta -->
+                  </div>
+                </div>
+                <!-- FIN Visualizacion -->
 
                     <!-- Requests -->
                     <div *ngIf="requests">
@@ -461,6 +391,7 @@ C17.8,38.5,24.5,37,32,37s14.2,1.5,19.1,3.8C56,43.2,59,46.4,59,50s-3,6.8-7.9,9.2C
 
                           <a
                             data-toggle="modal"
+                            (click)= "requestSearchID(request.id)"
                             href="#squarespaceModal1"
                             class="btn-sm btn-primary"
                             >

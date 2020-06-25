@@ -264,7 +264,7 @@
                     <tr>
                       <th class="text-center">
                         <button type="button" class="btn-table-collapse"></button
-                        >Departament<span class="sorting-arrows"></span>
+                        >Problem Type<span class="sorting-arrows"></span>
                       </th>
                       <th class="text-center">Issue<span class="sorting-arrows"></span></th>
                       <th class="text-center">Status<span class="sorting-arrows"></span></th>
@@ -346,136 +346,105 @@
                     </div>
   
                     <div
-                      class="modal fade"
-                      id="squarespaceModal1"
-                      tabindex="-1"
-                      role="dialog"
-                      aria-labelledby="modalLabel"
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button
-                              type="button"
-                              class="close"
-                              data-dismiss="modal"
-                            >
-                              <span aria-hidden="true">×</span
-                              ><span class="sr-only">Cerrar</span>
-                            </button>
-                            <h3 class="modal-title" id="lineModalLabel">
-                              Ticket Information
-                            </h3>
-                          </div>
-                          <div _ngcontent-mvt-c49="" class="modal-body">
-                            <div _ngcontent-mvt-c49="" class="form-group">
-                              <label
-                                _ngcontent-mvt-c49=""
-                                for="exampleInputEmail1"
-                                >Problem type</label>
-                              
-                              <select
-                                _ngcontent-mvt-c49=""
-                                size="1"
-                                class="form-control">
-                                <option _ngcontent-mvt-c49="" selected="selectes">{{requestsUser.description}}</option>
-                              </select>
-                            </div>
-                            <div _ngcontent-mvt-c49="" class="form-group">
-                              <label
-                                _ngcontent-mvt-c49=""
-                                for="exampleInputEmail1"
-                                >Description</label
-                              ><input
-                                _ngcontent-mvt-c49=""
-                                type="text"
-                                id="exampleInputEmail1"
-                                value="desc"
-                                disabled=""
-                                class="form-control"
+                    class="modal fade"
+                    id="squarespaceModal1"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="modalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                          >
+                            <span aria-hidden="true">×</span
+                            ><span class="sr-only">Back</span>
+                          </button>
+                          <h3 class="modal-title" id="lineModalLabel">
+                            Ticket Information
+                          </h3>
+                        </div>
+                        <div _ngcontent-mvt-c49="" class="modal-body">
+                          <div _ngcontent-mvt-c49="" class="form-group">
+                            <label
+                              _ngcontent-mvt-c49=""
+                              for="exampleProblem"
+                              >Problem type</label>
+                            
+                              <input
+                              _ngcontent-mvt-c49=""
+                              type="text"
+                              id="problem_type"
+                              [(ngModel)]= "requestProblem"
+                              disabled=""
+                              class="form-control"
                               />
-                            </div>
-                            <div _ngcontent-mvt-c49="" class="form-group">
-                              <label
-                                _ngcontent-mvt-c49=""
-                                for="exampleInputEmail1"
-                                >Last customer response</label
-                              ><textarea
-                                _ngcontent-mvt-c49=""
-                                rows="5"
-                                cols="20"
-                                wrap="off"
-                                disabled=""
-                                class="form-control"
-                              >
-                                  Testing...</textarea
-                              >
-                            </div>
-                            <div _ngcontent-mvt-c49="" class="form-group">
-                              <label
-                                _ngcontent-mvt-c49=""
-                                for="exampleInputPassword1"
-                                >Last support response</label
-                              ><textarea
-                                _ngcontent-mvt-c49=""
-                                rows="5"
-                                cols="20"
-                                wrap="off"
-                                placeholder="Support..."
-                                required=""
-                                disabled=""
-                                class="form-control"
-                              >
-                                  Last answer...</textarea
-                              >
-                            </div>
-                            <div _ngcontent-mvt-c49="" class="form-group">
-                              <label
-                                _ngcontent-mvt-c49=""
-                                for="exampleInputPassword1"
-                                >New answer</label
-                              ><textarea
-                                _ngcontent-mvt-c49=""
-                                rows="5"
-                                cols="20"
-                                wrap="off"
-                                placeholder="New answer..."
-                                required=""
-                                class="form-control"
-                              ></textarea>
-                            </div>
                           </div>
-                          <div class="modal-footer">
-                            <div
-                              class="btn-group btn-group-justified"
-                              role="group"
-                              aria-label="group button"
-                            >
-                              <div class="btn-group" role="group">
-                                <button
-                                  class="btn btn-default btn-hover-green"
-                                  data-dismiss="modal"
-                                >
-                                  Salir
-                                </button>
-                                <!-- fin form -->
-                              </div>
+                          <div _ngcontent-mvt-c49="" class="form-group">
+                            <label
+                              _ngcontent-mvt-c49=""
+                              for="exampleInputEmail1"
+                              >Description</label
+                            ><input
+                              _ngcontent-mvt-c49=""
+                              type="text"
+                              id="description3"
+                              [(ngModel)]= "requestUnico"
+                              disabled=""
+                              class="form-control"
+                            />
+                          </div>
+                          <div _ngcontent-mvt-c49="" class="form-group">
+                            <label
+                              _ngcontent-mvt-c49=""
+                              for="exampleInputEmail2"
+                              >Last response</label
+                            ><textarea
+                              _ngcontent-mvt-c49=""
+                              rows="5"
+                              cols="20"
+                              wrap="off"
+                              class="form-control"
+                              disabled=""
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <div
+                            class="btn-group btn-group-justified"
+                            role="group"
+                            aria-label="group button"
+                          >
+                            <div class="btn-group" role="group">
+                              <button
+                                class="btn btn-default btn-hover-green"
+                                data-dismiss="modal"
+                              >
+                                Back
+                              </button>
+                              <!-- fin form -->
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
                     <!-- FIN Visualizacion -->
                     <!-- Aqui inicia request -->
                     <tr *ngFor="let request of requestsUser">
                       <td>
                         <button type="button" class="btn-table-collapse"></button>
-                        Web
+                        <div style="text-align: center;">
+                          {{ request.id_problem_type }}
+                        </div>
                       </td>
                       <td>
                         <div class="text-primary">
-                          #{{ request.id_problem_type }}
+                          
                           {{ request.description }}
                         </div>
                       </td>
@@ -495,12 +464,15 @@
                       </td>
   
                       <td>
-                        {{request.priority}}
+                        <div style="text-align: center;">
+                          {{request.priority}}
+                        </div>
                       </td>
   
                       <td class="text-center sorting_1 text-nowrap">
                         <a
                           data-toggle="modal"
+                          (click)= "requestSearchID(request.id)"
                           href="#squarespaceModal1"
                           class="btn-sm btn-primary"
                           ><i class="fa fa-eye" style="margin-right: 1px;"></i
